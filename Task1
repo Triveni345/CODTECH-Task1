@@ -1,0 +1,35 @@
+# Basic calculator 
+
+print("Basic Calculator")
+
+# Get user input for the two numbers
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+
+# Get user input for the operation
+print("\nSelect the operation:")
+print("1. Addition (+)")
+print("2. Subtraction (-)")
+print("3. Multiplication (*)")
+print("4. Division (/)")
+
+choice = input("Enter the operation (1/2/3/4): ")
+
+# Perform the operation based on the user's choice
+if choice == '1':
+    result = num1 + num2
+    print(f"\nResult: {num1} + {num2} = {result}")
+elif choice == '2':
+    result = num1 - num2
+    print(f"\nResult: {num1} - {num2} = {result}")
+elif choice == '3':
+    result = num1 * num2
+    print(f"\nResult: {num1} * {num2} = {result}")
+elif choice == '4':
+    if num2 == 0:
+        print("\nError! Division by zero.")
+    else:
+        result = num1 / num2
+        print(f"\nResult: {num1} / {num2} = {result}")
+else:
+    print("\nInvalid input! Please choose a valid operation (1/2/3/4).")
